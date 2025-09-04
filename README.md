@@ -2,6 +2,8 @@
 
 A personalized movie recommendation system built with **Streamlit** and **TMDB API**. This project uses collaborative filtering techniques (User-based, Item-based, and SVD) to suggest movies and provides movie details fetched from **The Movie Database (TMDB)**.
 
+Live App: https://movie-recommendation-system-mjc8awkzejmjxsqxrschf9.streamlit.app/
+
 ---
 
 ## Features
