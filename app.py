@@ -14,7 +14,7 @@ from movie_recommender import (
     recommend_top_n,
     precision_at_k
 )
-from config import TMDB_API_KEY  
+TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
 
 st.set_page_config(
     page_title="CineAI - Movie Recommendation System",
@@ -632,4 +632,5 @@ def main():
                 st.markdown('</div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
+
     main()
