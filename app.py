@@ -631,7 +631,7 @@ def main():
                         display_movie_card(title, i)
                 st.markdown('</div>', unsafe_allow_html=True)
 
-                  st.markdown("""
+                st.markdown("""
                 <div style='text-align:center; padding:20px; color:#a1a1aa; font-size:0.9rem;'>
                     Made by Arwa Abbas
                 </div>
@@ -640,4 +640,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
