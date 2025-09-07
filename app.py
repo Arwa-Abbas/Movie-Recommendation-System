@@ -17,7 +17,7 @@ from movie_recommender import (
 TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
 
 st.set_page_config(
-    page_title="CineAI - Movie Recommendation System",
+    page_title="Movie Recommendation System",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -131,7 +131,7 @@ body {
     to { opacity: 1; transform: translateX(0); }
 }
 
-/* Enhanced Buttons */
+/* Buttons */
 .stButton > button {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: white;
@@ -585,7 +585,7 @@ def main():
         prec_k = st.slider("Precision@K", 5, 20, 10)
         threshold = st.slider("Rating Threshold", 1.0, 5.0, 3.5, 0.5)
 
-    # Main content with enhanced button
+    # Main content
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         if st.button("Discover Movies", use_container_width=True):
@@ -609,7 +609,7 @@ def main():
             loading_placeholder.empty()
             
             if recommended_movies:
-                # Success message with animation
+                # Success message 
                 st.markdown(f"""
                 <div class="success-message">
                     Precision@{prec_k}: {precision:.4f} | Found {len(recommended_movies)} perfect matches!
@@ -623,7 +623,7 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
                 
-                # Movies grid with enhanced cards
+                # Movies grid
                 st.markdown('<div class="movies-grid">', unsafe_allow_html=True)
                 cols = st.columns(5)
                 for i, title in enumerate(recommended_movies, 1):
@@ -631,6 +631,13 @@ def main():
                         display_movie_card(title, i)
                 st.markdown('</div>', unsafe_allow_html=True)
 
+                  st.markdown("""
+                <div style='text-align:center; padding:20px; color:#a1a1aa; font-size:0.9rem;'>
+                    Made by Arwa Abbas
+                </div>
+                """, unsafe_allow_html=True)
+
 if __name__ == "__main__":
 
     main()
+
